@@ -1,15 +1,16 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main(){
-    int loop, num, sum = 0;
+    int loop, sum = 0;
+    string num;
 
     cin>>loop;
     cin>>num;
 
     for(int i = 0; i < loop; i++){
-        sum += num % 10;
-        num /= 10;
+        sum += num[i] - '0';
     }
 
     cout<<sum<<endl;
